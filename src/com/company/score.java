@@ -50,8 +50,12 @@ class score
 
     public static void sort()
     {
+        Arrays.sort(math);
+        System.out.println();
+        Arrays.sort(chiness);
+        Arrays.sort(english);
 
-        Arrays.sort(average);
+
     }
 
     public static void outs()
@@ -74,7 +78,3 @@ class score
         outs();
     }
 }
-
-
-
-
