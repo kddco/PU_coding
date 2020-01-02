@@ -1,0 +1,59 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class binarySUM{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String s1=sc.next();//110
+        String s2=sc.next();//1
+        while(s1.length()!=s2.length()){
+            if(s1.length()>s2.length()){//s1長度大於s2
+                int a=s1.length()-s2.length();//算出兩個字串的長度差
+                for(int i=1;i<=a;i++){
+                    s2="0"+s2;
+                }
+            }
+            else{////s2長度大於s1
+                int a=s2.length()-s1.length();//算出兩個字串的長度差
+                for(int i=1;i<=a;i++){
+                    s1="0"+s1;
+                }
+            }
+        }
+        System.out.println(s1+" "+s2);
+        /*
+        110
+        011
+         01
+        */
+        String result="";
+        int carry=0;
+        for(int i=s1.length()-1;i>=0;i--){  //分別拜訪每個index
+            int ans=(int)(s1.charAt(i)-'0')+(int)(s2.charAt(i)-'0')+carry;//0,1,2
+//            System.out.println(ans);
+            carry=0;
+            if(ans==0){
+                System.out.print("0");
+
+            }
+            else if(ans ==1){
+                System.out.print("1");
+            }
+            else if(ans==2){
+                carry=1;
+                System.out.print("0");
+            }
+            else{
+                carry=1;
+                System.out.print("1");
+            }
+
+
+
+
+        }
+
+    }
+}
+
