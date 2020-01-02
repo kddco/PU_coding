@@ -27,5 +27,6 @@ class Adjust
             else d=a[i];
             System.out.println(d);
         }
+     
     }
 }
