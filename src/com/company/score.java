@@ -77,4 +77,5 @@ class score
         sort();//排序
         outs();
     }
+    
 }
